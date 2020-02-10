@@ -1,0 +1,9 @@
+<div class="card" style="width: 18rem;"
+    [ngClass]="{'terminada': (tarea.completa === true), 'pendiente': (tarea.completa === false)}">
+    <div class="card-body">
+        <h5 class="card-title">{{tarea.titulo}}</h5>
+        <p class="card-text">{{tarea.texto}}</p>
+        <a (click)="manejarClick()" href="#" class="btn btn-primary">Cambiar Estado Tarea</a>
+        <a (click)="manejarClickBorrarTarea()" href="#" class="btn btn-primary">Borrar Tarea</a>
+    </div>
+</div>

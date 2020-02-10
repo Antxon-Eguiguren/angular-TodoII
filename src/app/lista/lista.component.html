@@ -1,0 +1,16 @@
+<div>
+
+    <select (change)="manejarCambioFiltro($event)" class="custom-select">
+        <option selected>Selecciona una opción:</option>
+        <option value="todas">Todas</option>
+        <option value="completadas">Completadas</option>
+        <option value="pendientes">Pendientes</option>
+    </select>
+
+    <div *ngFor="let objetoTarea of arrTareas">
+        <app-detalles [tarea]="objetoTarea" (tareaABorrar)="manejarTareaABorrar($event)"
+            *ngIf="valorSelect === 'todas' || objetoTarea.completa == (valorSelect == 'completadas')">
+        </app-detalles>
+    </div>
+
+</div>
