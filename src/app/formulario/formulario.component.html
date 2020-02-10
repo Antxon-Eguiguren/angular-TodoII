@@ -1,0 +1,11 @@
+<div class="form-group">
+    <label for="formGroupExampleInput">Título de la Tarea</label>
+    <input [(ngModel)]="tarea.titulo" type="text" class="form-control" id="formGroupExampleInput"
+        placeholder="Introduce el título de la tarea">
+</div>
+<div class="form-group">
+    <label for="formGroupExampleInput2">Descripción de la Tarea</label>
+    <input [(ngModel)]="tarea.texto" type="text" class="form-control" id="formGroupExampleInput2"
+        placeholder="Introduce la descripción de la tarea">
+</div>
+<button (click)="manejarClick()" type="submit" class="btn btn-primary">Guardar Tarea</button>

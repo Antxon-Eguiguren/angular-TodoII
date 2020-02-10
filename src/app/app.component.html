@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-6">
+      <div class="formulario">
+        <app-formulario (tareaEnviada)="manejarTareaEnviada($event)"></app-formulario>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="lista">
+        <app-lista [arrTareas]="arrTareas"></app-lista>
+      </div>
+    </div>
+
+  </div>
+</div>
